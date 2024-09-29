@@ -1,10 +1,4 @@
 <div align="center">
-  <a href="https://irusa.org/middle-east/palestine/">
-    <img src="assets/palestine-banner.png" width="800px">
-  </a>
-</div>
-
-<div align="center">
   <img src="assets/icon-color.svg" width="200px">
   <h1>envio</h1>
 </div>
