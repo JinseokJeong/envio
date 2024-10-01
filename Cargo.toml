@@ -1,6 +1,6 @@
 [package]
 name = "envio"
-version = "0.6.0"
+version = "0.6.1"
 rust-version = "1.75.0"
 description = "A Modern And Secure CLI Tool For Managing Environment Variables"
 edition = "2021"
@@ -47,3 +47,6 @@ chrono = "0.4.33"
 clap = { version = "4.1.8", features = ["derive"] }
 clap_mangen = "0.2.9"
 clap_complete = "4.5.1"
+
+[profile.release]
+lto = true

@@ -115,8 +115,8 @@ pub enum Command {
         no_pretty_print: bool,
         #[arg(required = false, long = "display-comments", short = 'c')]
         display_comments: bool,
-        #[arg(required = false, long = "display-expired", short = 'e')]
-        display_expired: bool,
+        #[arg(required = false, long = "display-expiration-date", short = 'x')]
+        display_expiration_date: bool,
     },
     #[command(
         name = "update",
@@ -134,6 +134,8 @@ pub enum Command {
             num_args = 1..,
         )]
         envs: Vec<String>,
+        #[arg(required = false, long = "update-values", short = 'v')]
+        update_values: bool,
         #[arg(required = false, long = "update-comments", short = 'c')]
         update_comments: bool,
         #[arg(required = false, long = "update-expiration-date", short = 'x')]
@@ -173,8 +175,8 @@ pub enum Command {
     },
     #[command(name = "version", about = "Print the version")]
     Version {
-        #[arg(required = false)]
-        verbose: Option<bool>,
+        #[arg(required = false, long = "verbose", short = 'v')]
+        verbose: bool,
     },
 }
 

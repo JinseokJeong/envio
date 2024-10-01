@@ -429,7 +429,7 @@ _envio() {
             return 0
             ;;
         envio__list)
-            opts="-p -n -v -c -e -h --profiles --profile-name --no-pretty-print --display-comments --display-expired --help"
+            opts="-p -n -v -c -x -h --profiles --profile-name --no-pretty-print --display-comments --display-expiration-date --help"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0
@@ -501,7 +501,7 @@ _envio() {
             return 0
             ;;
         envio__update)
-            opts="-e -c -x -h --envs --update-comments --update-expiration-date --help <PROFILE_NAME>"
+            opts="-e -v -c -x -h --envs --update-values --update-comments --update-expiration-date --help <PROFILE_NAME>"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0
@@ -523,7 +523,7 @@ _envio() {
             return 0
             ;;
         envio__version)
-            opts="-h --help true false"
+            opts="-v -h --verbose --help"
             if [[ ${cur} == -* || ${COMP_CWORD} -eq 2 ]] ; then
                 COMPREPLY=( $(compgen -W "${opts}" -- "${cur}") )
                 return 0

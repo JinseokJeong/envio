@@ -96,8 +96,8 @@ Register-ArgumentCompleter -Native -CommandName 'envio' -ScriptBlock {
             [CompletionResult]::new('--no-pretty-print', 'no-pretty-print', [CompletionResultType]::ParameterName, 'no-pretty-print')
             [CompletionResult]::new('-c', 'c', [CompletionResultType]::ParameterName, 'c')
             [CompletionResult]::new('--display-comments', 'display-comments', [CompletionResultType]::ParameterName, 'display-comments')
-            [CompletionResult]::new('-e', 'e', [CompletionResultType]::ParameterName, 'e')
-            [CompletionResult]::new('--display-expired', 'display-expired', [CompletionResultType]::ParameterName, 'display-expired')
+            [CompletionResult]::new('-x', 'x', [CompletionResultType]::ParameterName, 'x')
+            [CompletionResult]::new('--display-expiration-date', 'display-expiration-date', [CompletionResultType]::ParameterName, 'display-expiration-date')
             [CompletionResult]::new('-h', 'h', [CompletionResultType]::ParameterName, 'Print help')
             [CompletionResult]::new('--help', 'help', [CompletionResultType]::ParameterName, 'Print help')
             break
@@ -105,6 +105,8 @@ Register-ArgumentCompleter -Native -CommandName 'envio' -ScriptBlock {
         'envio;update' {
             [CompletionResult]::new('-e', 'e', [CompletionResultType]::ParameterName, 'e')
             [CompletionResult]::new('--envs', 'envs', [CompletionResultType]::ParameterName, 'envs')
+            [CompletionResult]::new('-v', 'v', [CompletionResultType]::ParameterName, 'v')
+            [CompletionResult]::new('--update-values', 'update-values', [CompletionResultType]::ParameterName, 'update-values')
             [CompletionResult]::new('-c', 'c', [CompletionResultType]::ParameterName, 'c')
             [CompletionResult]::new('--update-comments', 'update-comments', [CompletionResultType]::ParameterName, 'update-comments')
             [CompletionResult]::new('-x', 'x', [CompletionResultType]::ParameterName, 'x')
@@ -132,6 +134,8 @@ Register-ArgumentCompleter -Native -CommandName 'envio' -ScriptBlock {
             break
         }
         'envio;version' {
+            [CompletionResult]::new('-v', 'v', [CompletionResultType]::ParameterName, 'v')
+            [CompletionResult]::new('--verbose', 'verbose', [CompletionResultType]::ParameterName, 'verbose')
             [CompletionResult]::new('-h', 'h', [CompletionResultType]::ParameterName, 'Print help')
             [CompletionResult]::new('--help', 'help', [CompletionResultType]::ParameterName, 'Print help')
             break

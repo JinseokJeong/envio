@@ -31,9 +31,10 @@ complete -c envio -n "__fish_seen_subcommand_from list" -s n -l profile-name -r
 complete -c envio -n "__fish_seen_subcommand_from list" -s p -l profiles
 complete -c envio -n "__fish_seen_subcommand_from list" -s v -l no-pretty-print
 complete -c envio -n "__fish_seen_subcommand_from list" -s c -l display-comments
-complete -c envio -n "__fish_seen_subcommand_from list" -s e -l display-expired
+complete -c envio -n "__fish_seen_subcommand_from list" -s x -l display-expiration-date
 complete -c envio -n "__fish_seen_subcommand_from list" -s h -l help -d 'Print help'
 complete -c envio -n "__fish_seen_subcommand_from update" -s e -l envs -r
+complete -c envio -n "__fish_seen_subcommand_from update" -s v -l update-values
 complete -c envio -n "__fish_seen_subcommand_from update" -s c -l update-comments
 complete -c envio -n "__fish_seen_subcommand_from update" -s x -l update-expiration-date
 complete -c envio -n "__fish_seen_subcommand_from update" -s h -l help -d 'Print help'
@@ -43,6 +44,7 @@ complete -c envio -n "__fish_seen_subcommand_from export" -s h -l help -d 'Print
 complete -c envio -n "__fish_seen_subcommand_from import" -s f -l file-to-import-from -r
 complete -c envio -n "__fish_seen_subcommand_from import" -s u -l url -r
 complete -c envio -n "__fish_seen_subcommand_from import" -s h -l help -d 'Print help'
+complete -c envio -n "__fish_seen_subcommand_from version" -s v -l verbose
 complete -c envio -n "__fish_seen_subcommand_from version" -s h -l help -d 'Print help'
 complete -c envio -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from create; and not __fish_seen_subcommand_from add; and not __fish_seen_subcommand_from load; and not __fish_seen_subcommand_from unload; and not __fish_seen_subcommand_from launch; and not __fish_seen_subcommand_from remove; and not __fish_seen_subcommand_from list; and not __fish_seen_subcommand_from update; and not __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from import; and not __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from help" -f -a "create" -d 'Create a new profile'
 complete -c envio -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from create; and not __fish_seen_subcommand_from add; and not __fish_seen_subcommand_from load; and not __fish_seen_subcommand_from unload; and not __fish_seen_subcommand_from launch; and not __fish_seen_subcommand_from remove; and not __fish_seen_subcommand_from list; and not __fish_seen_subcommand_from update; and not __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from import; and not __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from help" -f -a "add" -d 'Add envionment variables to a profile'
